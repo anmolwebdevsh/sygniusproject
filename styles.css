@@ -18,6 +18,11 @@
   box-sizing: border-box;
 }
 
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .section__container {
   max-width: var(--max-width);
   margin: auto;
@@ -381,6 +386,8 @@ nav {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-dark);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .popular__content p {
@@ -548,6 +555,9 @@ nav {
   color: var(--text-light);
   cursor: pointer;
   transition: 0.3s;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .footer__col p:hover {
@@ -696,8 +706,14 @@ nav {
   }
 
   .footer__container {
+    grid-template-columns: 1fr;
     gap: 2rem;
     padding: 3rem 1rem;
+  }
+  
+  .footer__col {
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .reward__container {
